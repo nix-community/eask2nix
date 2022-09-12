@@ -28,6 +28,9 @@ $ npm install
 
 # export to environment $PATH
 export PATH="$HOME/eask2nix/bin:$PATH"
+
+# give execute permissions
+chmod 777 /path/to/eask2nix/bin/eask2nix
 ```
 
 Or download binaries from our [releases](https://github.com/jcs090218/eask2nix/releases) page.
