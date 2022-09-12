@@ -41,6 +41,8 @@
       (eask-msg sha256))
     "done ✓")
 
+  (setq sha256 (s-replace "\n" "" sha256))
+
   (eask-with-progress
     "Generating your package default.nix file... "
     (let ((template-nix (expand-file-name "templates/trivialBuild.nix" eask2nix-root))
