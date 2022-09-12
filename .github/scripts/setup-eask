@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+npm install
+echo "$GITHUB_WORKSPACE/bin" >> "$GITHUB_PATH"
