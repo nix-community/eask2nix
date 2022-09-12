@@ -37,7 +37,6 @@ function _remove_undefined(arr) {
 async function checkExec(name) {
   return new Promise(resolve => {
     let exec = which.sync(name);
-
     let proc = child_process.spawn(exec, ['--version']);
 
     // You would just need to register the error event, or else it can't print
@@ -101,9 +100,6 @@ async function e_call(argv, script, ...args) {
     console.log('');
 
     let exec = which.sync('eask');
-
-    console.log(exec);
-
     let proc = child_process.spawn(exec, cmd, { stdio: 'inherit' });
 
     proc.on('close', function (code) {
