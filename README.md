@@ -4,3 +4,7 @@
 # eask2nix
 
 Convert `Eask` into Nix expressions
+
+## Installation
+
+WIP
