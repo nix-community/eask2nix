@@ -36,7 +36,8 @@
   "files": [
     "cmds",
     "src",
-    "lisp"
+    "lisp",
+	"templates"
   ],
   "publishConfig": {
     "access": "public"

@@ -58,6 +58,7 @@ jobs:
     - name: Prepare content...
       run: |
         mv lisp dist
+        mv templates dist
         mv COPYING dist
         mv README.md dist
 
