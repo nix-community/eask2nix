@@ -2,8 +2,9 @@
 [![Release](https://img.shields.io/github/release/jcs090218/eask2nix.svg?logo=github)](https://github.com/jcs090218/eask2nix/releases/latest)
 
 # eask2nix
+> Convert `Eask` into Nix expressions
 
-Convert `Eask` into Nix expressions
+[![Build](https://github.com/jcs090218/eask2nix/actions/workflows/build.yml/badge.svg)](https://github.com/jcs090218/eask2nix/actions/workflows/build.yml)
 
 ## Installation
 
