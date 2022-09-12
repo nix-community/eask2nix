@@ -2,13 +2,13 @@
 
 ;;; Commentary:
 ;;
-;; Command to ,
+;; Command to generate Nix expressions from an Eask-file
 ;;
 ;;   $ eask2nix generate [file]
 ;;
 
 ;;; Code:
 
-(message "??")
+
 
 ;;; generate.el ends here
