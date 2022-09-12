@@ -6,6 +6,14 @@
 
 [![Build](https://github.com/jcs090218/eask2nix/actions/workflows/build.yml/badge.svg)](https://github.com/jcs090218/eask2nix/actions/workflows/build.yml)
 
+## 🚩 Prerequisite Tools
+
+You will need the following tools in order to run this tool!
+
+- [emacs](https://www.gnu.org/software/emacs/download.html)
+- [eask](https://emacs-eask.github.io/)
+- [nix-hash](https://nixos.wiki/wiki/Nix_Hash)
+
 ## 💾 Installation
 
 Easiest way to install this tool is install it with `npm`:
@@ -48,8 +56,11 @@ export PATH="$HOME/eask2nix:$PATH"
 To generate `default.nix` for a set of dependencies:
 
 ```sh
-$ eask2nix generate Eask[file]
+$ eask2nix generate [eask-file]
 ```
+
+If `[eask-file]` is not specified, will load `Eask`-file from current working
+directory instead.
 
 ## 📝 Todo list
 
