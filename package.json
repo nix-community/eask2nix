@@ -4,7 +4,14 @@
   "description": "Convert Eask into Nix expressions",
   "main": "emacs2nix",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-all": "pkg package.json",
+    "build-linux-x64": "pkg package.json -t node16-linux-x64",
+    "build-macos-x64": "pkg package.json -t node16-macos-x64",
+    "build-windows-x64": "pkg package.json -t node16-win-x64"
+  },
+  "bin": {
+    "eask2nix": "./eask2nix"
   },
   "repository": {
     "type": "git",
@@ -13,7 +20,8 @@
   "keywords": [
     "nix",
     "emacs",
-    "eask"
+    "eask",
+    "cli"
   ],
   "author": "Jen-Chieh Shen",
   "license": "GPL-3.0",
@@ -23,5 +31,24 @@
   "homepage": "https://github.com/jcs090218/eask2nix#readme",
   "dependencies": {
     "yargs": "^17.5.1"
+  },
+  "files": [
+    "cmds",
+    "src"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "pkg": {
+    "scripts": [
+      "cmds/**/*.js",
+      "src/**/*.js"
+    ],
+    "targets": [
+      "node16-linux-x64",
+      "node16-macos-x64",
+      "node16-win-x64"
+    ],
+    "outputPath": "dist"
   }
 }

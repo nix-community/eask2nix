@@ -1,0 +1,30 @@
+#!/usr/bin/env node
+
+const env = require('./src/env');
+const yargs = require('yargs');
+
+const usage = `eask2nix is the main command, used to generate Nix expressions
+
+Convert Eask into Nix expressions
+
+Usage: eask2nix <command> [options..]`;
+
+const epilogue = `For more information, find the manual at https://github.com/jcs090218/eask2nix#eask2nix`;
+
+yargs
+  .usage(usage)
+  .scriptName('')
+  .epilogue(epilogue)
+  .commandDir('cmds/')
+  .command({
+    command: '*',
+    handler() { yargs.showHelp(); }
+  })
+  .showHelpOnFail(true)
+  .help(
+    'help',
+    'Show usage instructions'
+  )
+  .demandCommand()
+  .wrap(yargs.terminalWidth())
+  .argv;
