@@ -6,7 +6,7 @@
 
 [![Build](https://github.com/jcs090218/eask2nix/actions/workflows/build.yml/badge.svg)](https://github.com/jcs090218/eask2nix/actions/workflows/build.yml)
 
-## Installation
+## 💾 Installation
 
 Easiest way to install this tool is install it with `npm`:
 
@@ -27,9 +27,13 @@ $ cd eask2nix
 $ npm install
 ```
 
-## Usage
+## 🔧 Usage
 
 WIP
+
+## 📝 Todo list
+
+- [ ] Handle dependencies in generated Nix expressions
 
 ## Contact
 
