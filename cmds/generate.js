@@ -38,8 +38,8 @@ exports.handler = async (argv) => {
   let okEask = await UTIL.checkExec('eask');
   if (okEask != 0) return;
 
-  // let okNixHash = await UTIL.checkExec('nix-hash');
-  // if (okNixHash != 0) return;
+  let okNixHash = await UTIL.checkExec('nix-hash');
+  if (okNixHash != 0) return;
 
   UTIL.e_call(argv, 'generate', argv.file);
 };
