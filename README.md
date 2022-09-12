@@ -45,6 +45,8 @@ export PATH="$HOME/eask2nix:$PATH"
 
 ## 🔧 Usage
 
+To generate `default.nix` for a set of dependencies:
+
 ```sh
 $ eask2nix generate Eask[file]
 ```
