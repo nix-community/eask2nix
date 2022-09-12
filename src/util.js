@@ -22,10 +22,12 @@
 const child_process = require("child_process");
 const path = require('path');
 
-/* Return plugin directory */
-function plugin_dir() {
-  let root = (IS_PKG) ? process.execPath : __dirname;
-  return path.join(root, '..');
+/*
+ * Remove `undefined` item from the array
+ * @param { Array } arr - target array
+ */
+function _remove_undefined(arr) {
+  return arr.filter(elm => { return elm !== undefined; });
 }
 
 /**
@@ -50,8 +52,68 @@ async function checkExec(name) {
   });
 }
 
+/* Return plugin directory */
+function plugin_dir() {
+  let root = (IS_PKG) ? process.execPath : __dirname;
+  return path.join(root, '..');
+}
+
+/**
+ * Handle global options
+ *
+ * @param { Object } argv - is a parsed object from yargs.
+ */
+function _global_options(argv) {
+  let flags = [];
+  return flags;
+}
+
+/**
+ * Form elisp script path.
+ * @param { string } name - Name of the script without extension.
+ */
+function el_script(name) {
+  let _script = 'lisp/' + name + '.el';
+  let _path = path.join(plugin_dir(), _script);
+  return _path;
+}
+
+/**
+ * Call eask process
+ * @param { string } script - name of the script from `../lisp`
+ * @param { string } args - the rest of the arguments
+ */
+async function e_call(argv, script, ...args) {
+  return new Promise(resolve => {
+    let _path = el_script(script);
+
+    let cmd_base = ['load', _path];
+    let cmd_args = args.flat();
+    let cmd_global = _global_options(argv).flat();  // TODO: remove this?
+    let cmd = cmd_base.concat(cmd_args).concat(cmd_global);
+    cmd = _remove_undefined(cmd);
+
+    console.log(`Running eask2nix to generate Nix expressions`);
+    console.log('Press Ctrl+C to cancel.');
+    console.log('');
+    console.log('Activating Eask... done! ✓');
+
+    let proc = child_process.spawn('eask', cmd, { stdio: 'inherit' });
+
+    proc.on('close', function (code) {
+      if (code == 0) {
+        resolve(code);
+        return;
+      }
+      throw 'Exit with code: ' + code;
+    });
+  });
+}
+
 /*
  * Module Exports
  */
 module.exports.checkExec = checkExec;
 module.exports.plugin_dir = plugin_dir;
+module.exports.el_script = el_script;
+module.exports.e_call = e_call;
