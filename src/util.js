@@ -36,21 +36,13 @@ function _remove_undefined(arr) {
  */
 async function checkExec(name) {
   return new Promise(resolve => {
-    let exec = which.sync(name);
-    let proc = child_process.spawn(exec, ['--version']);
-
-    // You would just need to register the error event, or else it can't print
-    // the help instruction below.
-    proc.on('error', function () { });
-
-    proc.on('close', function (code) {
-      if (code == 0) {
-        resolve(code);
-        return;
-      }
+    try {
+      which.sync(name);
+    } catch {
       process.stdout.write(`✗ This application requires ${name} to run, make sure you have it your environment $PATH`);
-      resolve(code);
-    });
+      resolve(-1);
+    }
+    resolve(0);
   });
 }
 

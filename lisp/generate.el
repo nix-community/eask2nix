@@ -29,6 +29,7 @@
     (setq hash (shell-command-to-string command))
     "done ✓")
 
+  (message "hash: %s" hash)
   )
 
 ;;; generate.el ends here
