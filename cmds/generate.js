@@ -25,10 +25,11 @@ exports.command = ['generate'];
 exports.desc = 'Generate Nix expressions from an Eask-file';
 
 exports.handler = async (argv) => {
-  let eask = await UTIL.checkExec('eask');
-  if (eask != 0) {
-    return;
-  }
+  let okEmacs = await UTIL.checkExec('emacs');
+  if (okEmacs != 0) return;
+
+  let okEask = await UTIL.checkExec('eask');
+  if (okEask != 0) return;
 
   console.log('process');
 };
