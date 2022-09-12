@@ -64,5 +64,5 @@ jobs:
     - name: Uploading...
       uses: actions/upload-artifact@v1
       with:
-        name: eask_${{ env.VERSION }}_${{ matrix.targets }}
+        name: eask2nix_${{ env.VERSION }}_${{ matrix.targets }}
         path: dist
