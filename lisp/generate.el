@@ -21,6 +21,9 @@
 (defconst nix-hash-format "nix-hash --flat --base32 --type sha256 %s"
   "Format string to hash the tar/el file.")
 
-(shell-command-to-string (format nix-hash-format (eask-packaged-file)))
+(let* ((command (format nix-hash-format (eask-packaged-file)))
+       (sha256 (shell-command-to-string command)))
+
+  )
 
 ;;; generate.el ends here
