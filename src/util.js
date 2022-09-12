@@ -19,6 +19,15 @@
 
 "use strict";
 
+const path = require('path');
+
+/* Return plugin directory */
+function plugin_dir() {
+  let root = (IS_PKG) ? process.execPath : __dirname;
+  return path.join(root, '..');
+}
+
 /*
  * Module Exports
  */
+module.exports.plugin_dir = plugin_dir;
