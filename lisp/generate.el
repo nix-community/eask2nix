@@ -21,8 +21,13 @@
 (defconst nix-hash-format "nix-hash --flat --base32 --type sha256 %s"
   "Format string to hash the tar/el file.")
 
-(let* ((command (format nix-hash-format (eask-packaged-file)))
-       (sha256 (shell-command-to-string command)))
+(let* ((packaged-file (eask-packaged-file))
+       (command (format nix-hash-format packaged-file))
+       (hash))
+  (eask-with-progress
+    (format "Retrieving hash value from %s..." packaged-file)
+    (setq hash (shell-command-to-string command))
+    "done ✓")
 
   )
 
