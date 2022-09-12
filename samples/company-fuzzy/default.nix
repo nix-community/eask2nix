@@ -6,8 +6,7 @@ trivialBuild {
 
   src = fetchurl {
     url = "{ place your source url here }";
-    sha256 = "089qcxnm7kw9njz6c6g73a3vimca07l88rq5rzhpifjmrmz5l7kk
-";
+    sha256 = "089qcxnm7kw9njz6c6g73a3vimca07l88rq5rzhpifjmrmz5l7kk";
   };
 
   meta = with lib; {
