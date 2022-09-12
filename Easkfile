@@ -1,0 +1,15 @@
+(package "eask2nix"
+         "0.1.0"
+         "Convert Eask into Nix expressions")
+
+(website-url "https://github.com/jcs090218/eask2nix")
+(keywords "nix" "emacs" "eask" "cli")
+
+(files
+ "eask2nix"
+ "bin"
+ "cmds/**/*.js"
+ "lisp/**/*.el"
+ "src")
+
+(depends-on "emacs" "26.1")
