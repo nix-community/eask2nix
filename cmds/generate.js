@@ -21,8 +21,15 @@
 
 const child_process = require("child_process");
 
-exports.command = ['generate'];
+exports.command = ['generate [file..]'];
 exports.desc = 'Generate Nix expressions from an Eask-file';
+exports.builder = {
+  file: {
+    description: 'target Eask-file',
+    requiresArg: false,
+    type: 'string',
+  },
+};
 
 exports.handler = async (argv) => {
   let okEmacs = await UTIL.checkExec('emacs');
@@ -31,5 +38,5 @@ exports.handler = async (argv) => {
   let okEask = await UTIL.checkExec('eask');
   if (okEask != 0) return;
 
-  UTIL.e_call(argv, 'generate');
+  UTIL.e_call(argv, 'generate', argv.file);
 };

@@ -30,12 +30,13 @@
   },
   "homepage": "https://github.com/jcs090218/eask2nix#readme",
   "dependencies": {
+    "which": "^2.0.2",
     "yargs": "^17.5.1"
   },
   "files": [
     "cmds",
     "src",
-	"lisp"
+    "lisp"
   ],
   "publishConfig": {
     "access": "public"

@@ -21,6 +21,7 @@
 
 const child_process = require("child_process");
 const path = require('path');
+const which = require('which');
 
 /*
  * Remove `undefined` item from the array
@@ -35,7 +36,9 @@ function _remove_undefined(arr) {
  */
 async function checkExec(name) {
   return new Promise(resolve => {
-    let proc = child_process.spawn(name, ['--version']);
+    let exec = which.sync(name);
+
+    let proc = child_process.spawn(exec, ['--version']);
 
     // You would just need to register the error event, or else it can't print
     // the help instruction below.
@@ -94,11 +97,14 @@ async function e_call(argv, script, ...args) {
     cmd = _remove_undefined(cmd);
 
     console.log(`Running eask2nix to generate Nix expressions`);
-    console.log('Press Ctrl+C to cancel.');
-    console.log('');
     console.log('Activating Eask... done! ✓');
+    console.log('');
 
-    let proc = child_process.spawn('eask', cmd, { stdio: 'inherit' });
+    let exec = which.sync('eask');
+
+    console.log(exec);
+
+    let proc = child_process.spawn(exec, cmd, { stdio: 'inherit' });
 
     proc.on('close', function (code) {
       if (code == 0) {
