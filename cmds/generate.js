@@ -25,30 +25,10 @@ exports.command = ['generate'];
 exports.desc = 'Generate Nix expressions from an Eask-file';
 
 exports.handler = async (argv) => {
-  process.chdir(UTIL.plugin_dir());
-  let proc = child_process.spawn('git', ['pull'], { stdio: 'inherit' });
+  let eask = await UTIL.checkExec('eask');
+  if (eask != 0) {
+    return;
+  }
 
-  // You would just need to register the error event, or else it can't print
-  // the help instruction below.
-  proc.on('error', function () { });
-
-  proc.on('close', function (code) {
-    if (code == 0) {
-      process.stdout.write('✓ Done upgrading Eask to the latest version');
-      return;
-    }
-    // Help instruction here!
-    console.log('');
-    console.log('');
-    console.log('✗ Failed to upgrade Eask, possible causes are:');
-    console.log('');
-    console.log('  [1] Make sure you have git installed and has the right permission');
-    console.log('  [2] You install Eask with other package management tool');
-    console.log('');
-    console.log('For example, if you have installed eask with npm:');
-    console.log('');
-    console.log('    $ npm install -g @emacs-eask/cli@latest');
-    console.log('');
-    process.stdout.write('Visit https://emacs-eask.github.io/Getting-Started/Install-Eask/ to see all available install options');
-  });
+  console.log('process');
 };

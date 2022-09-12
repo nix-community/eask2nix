@@ -19,6 +19,7 @@
 
 "use strict";
 
+const child_process = require("child_process");
 const path = require('path');
 
 /* Return plugin directory */
@@ -27,7 +28,30 @@ function plugin_dir() {
   return path.join(root, '..');
 }
 
+/**
+ * Make sure Eask is installed.
+ */
+async function checkExec(name) {
+  return new Promise(resolve => {
+    let proc = child_process.spawn(name, ['--version']);
+
+    // You would just need to register the error event, or else it can't print
+    // the help instruction below.
+    proc.on('error', function () { });
+
+    proc.on('close', function (code) {
+      if (code == 0) {
+        resolve(code);
+        return;
+      }
+      process.stdout.write(`✗ This application requires ${name} to run, make sure you have it your environment $PATH`);
+      resolve(code);
+    });
+  });
+}
+
 /*
  * Module Exports
  */
+module.exports.checkExec = checkExec;
 module.exports.plugin_dir = plugin_dir;
