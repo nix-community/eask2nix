@@ -56,11 +56,17 @@ export PATH="$HOME/eask2nix:$PATH"
 To generate `default.nix` for a set of dependencies:
 
 ```sh
-$ eask2nix generate [eask-file]
+# navigate to your elisp project
+$ cd your-elisp-project/
+
+# make sure the Eask exists, to create one do `eask init`
+$ cat Eask  # or Easkfile
+
+# generate the Nix expressions from current Eask-file
+$ eask2nix generate
 ```
 
-If `[eask-file]` is not specified, will load `Eask`-file from current working
-directory instead.
+*P.S. `eask2nix generate` will only take the current loaded Eask-file.*
 
 ## 📝 Todo list
 
