@@ -8,4 +8,29 @@
 
 ## Installation
 
+Easiest way to install this tool is install it with `npm`:
+
+```sh
+$ npm install -g eask2nix
+```
+
+Alternatively, you can install it from source:
+
+```sh
+# clone it
+$ git cloen https://github.com/jcs090218/eask2nix
+
+# navigate to project root
+$ cd eask2nix
+
+# install all dependencies
+$ npm install
+```
+
+## Usage
+
 WIP
+
+## Contact
+
+Problems and questions should go to GitHub [issues](https://github.com/jcs090218/eask2nix/issues).
