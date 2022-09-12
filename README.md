@@ -25,11 +25,16 @@ $ cd eask2nix
 
 # install all dependencies
 $ npm install
+
+# export to environment $PATH
+export PATH="$HOME/eask2nix/bin:$PATH"
 ```
 
 ## 🔧 Usage
 
-WIP
+```sh
+$ eask2nix generate Eask[file]
+```
 
 ## 📝 Todo list
 
