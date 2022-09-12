@@ -30,6 +30,16 @@ $ npm install
 export PATH="$HOME/eask2nix/bin:$PATH"
 ```
 
+Or download binaries from our [releases](https://github.com/jcs090218/eask2nix/releases) page.
+
+```sh
+# unzip binaires
+unzip eask2nix_0.1.0_[linux/macos]-[arm64/x64].zip
+
+# export to environment $PATH
+export PATH="$HOME/eask2nix:$PATH"
+```
+
 ## 🔧 Usage
 
 ```sh
