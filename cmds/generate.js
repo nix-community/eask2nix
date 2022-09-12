@@ -31,5 +31,5 @@ exports.handler = async (argv) => {
   let okEask = await UTIL.checkExec('eask');
   if (okEask != 0) return;
 
-  console.log('process');
+  UTIL.e_call(argv, 'generate');
 };
