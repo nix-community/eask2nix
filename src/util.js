@@ -39,7 +39,7 @@ async function checkExec(name) {
     try {
       which.sync(name);
     } catch {
-      process.stdout.write(`✗ This application requires ${name} to run, make sure you have it your environment $PATH`);
+      console.log(`✗ This application requires ${name} to run, make sure you have it your environment $PATH`);
       resolve(-1);
     }
     resolve(0);
