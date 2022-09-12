@@ -13,11 +13,11 @@
 (eask-load "core/package")
 
 (defconst eask2nix-lisp-root (file-name-directory load-file-name)
-  "")
+  "`eask2nix' lisp root path.")
 
 (defconst eask2nix-root
   (expand-file-name (concat eask2nix-lisp-root "../"))
-  "")
+  "`eask2nix' root path.")
 
 ;; If the packaged file doesn't exists, try to build one
 (unless (eask-packaged-file) (eask-call "core/package"))
