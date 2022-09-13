@@ -1,12 +1,12 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-green.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Release](https://img.shields.io/github/release/jcs090218/eask2nix.svg?logo=github)](https://github.com/jcs090218/eask2nix/releases/latest)
+[![Release](https://img.shields.io/github/release/nix-community/eask2nix.svg?logo=github)](https://github.com/nix-community/eask2nix/releases/latest)
 [![npm](https://img.shields.io/npm/v/eask2nix?logo=npm&color=green)](https://www.npmjs.com/package/eask2nix)
 [![npm-dm](https://img.shields.io/npm/dm/eask2nix.svg)](https://npmcharts.com/compare/eask2nix?minimal=true)
 
 # eask2nix
 > Convert `Eask` into Nix expressions
 
-[![Build](https://github.com/jcs090218/eask2nix/actions/workflows/build.yml/badge.svg)](https://github.com/jcs090218/eask2nix/actions/workflows/build.yml)
+[![Build](https://github.com/nix-community/eask2nix/actions/workflows/build.yml/badge.svg)](https://github.com/nix-community/eask2nix/actions/workflows/build.yml)
 
 ## 🚩 Prerequisite Tools
 
@@ -28,7 +28,7 @@ Alternatively, you can install it from source:
 
 ```sh
 # clone it
-$ git cloen https://github.com/jcs090218/eask2nix
+$ git cloen https://github.com/nix-community/eask2nix
 
 # navigate to project root
 $ cd eask2nix
@@ -43,7 +43,7 @@ export PATH="$HOME/eask2nix/bin:$PATH"
 chmod 777 /path/to/eask2nix/bin/eask2nix
 ```
 
-Or download binaries from our [releases](https://github.com/jcs090218/eask2nix/releases) page.
+Or download binaries from our [releases](https://github.com/nix-community/eask2nix/releases) page.
 
 ```sh
 # unzip binaires
@@ -76,4 +76,4 @@ $ eask2nix generate
 
 ## Contact
 
-Problems and questions should go to GitHub [issues](https://github.com/jcs090218/eask2nix/issues).
+Problems and questions should go to GitHub [issues](https://github.com/nix-community/eask2nix/issues).
