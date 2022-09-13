@@ -22,7 +22,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  VERSION: 0.1.1
+  VERSION: 0.1.2
   NODE: node16
 
 jobs:

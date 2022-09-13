@@ -1,6 +1,6 @@
 {
   "name": "eask2nix",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Convert Eask into Nix expressions",
   "main": "emacs2nix",
   "scripts": {

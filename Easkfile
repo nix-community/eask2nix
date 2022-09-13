@@ -1,5 +1,5 @@
 (package "eask2nix"
-         "0.1.1"
+         "0.1.2"
          "Convert Eask into Nix expressions")
 
 (website-url "https://github.com/jcs090218/eask2nix")
