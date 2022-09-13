@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jcs090218/eask2nix.git"
+    "url": "git+https://github.com/nix-community/eask2nix.git"
   },
   "keywords": [
     "nix",
@@ -26,9 +26,9 @@
   "author": "Jen-Chieh Shen",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/jcs090218/eask2nix/issues"
+    "url": "https://github.com/nix-community/eask2nix/issues"
   },
-  "homepage": "https://github.com/jcs090218/eask2nix#readme",
+  "homepage": "https://github.com/nix-community/eask2nix#readme",
   "dependencies": {
     "which": "^2.0.2",
     "yargs": "^17.5.1"
