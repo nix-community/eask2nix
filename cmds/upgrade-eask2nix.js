@@ -49,6 +49,6 @@ exports.handler = async (argv) => {
     console.log('');
     console.log('    $ npm install -g eask2nix@latest');
     console.log('');
-    process.stdout.write('Visit https://github.com/jcs090218/eask2nix#installation to see all available install options');
+    process.stdout.write('Visit https://github.com/nix-community/eask2nix#installation to see all available install options');
   });
 };

@@ -2,7 +2,7 @@
          "0.1.2"
          "Convert Eask into Nix expressions")
 
-(website-url "https://github.com/jcs090218/eask2nix")
+(website-url "https://github.com/nix-community/eask2nix")
 (keywords "nix" "emacs" "eask" "cli")
 
 (files

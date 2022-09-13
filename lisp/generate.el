@@ -63,6 +63,6 @@
   (eask-msg "  [1] Navigate to %s" eask-file-root)
   (eask-msg "  [2] See the file content with the `cat %s` command" nix-default-file)
   (eask-msg "")
-  (eask-msg "Visit https://github.com/jcs090218/eask2nix for quickstart guide and full documentation."))
+  (eask-msg "Visit https://github.com/nix-community/eask2nix for quickstart guide and full documentation."))
 
 ;;; generate.el ends here
