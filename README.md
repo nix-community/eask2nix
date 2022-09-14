@@ -10,7 +10,7 @@
 
 ## 🚩 Prerequisite Tools
 
-You will need the following tools in order to run this tool!
+You will need the following software to run this tool!
 
 - [emacs](https://www.gnu.org/software/emacs/download.html)
 - [eask](https://emacs-eask.github.io/)
@@ -18,13 +18,13 @@ You will need the following tools in order to run this tool!
 
 ## 💾 Installation
 
-Easiest way to install this tool is install it with `npm`:
+The easiest way to install this tool is to install it with `npm`:
 
 ```sh
 $ npm install -g eask2nix
 ```
 
-Alternatively, you can install it from source:
+Alternatively, you can install it from the source:
 
 ```sh
 # clone it
@@ -73,6 +73,7 @@ $ eask2nix generate
 ## 📝 Todo list
 
 - [ ] Handle dependencies in generated Nix expressions
+- [ ] Generate installable Nix expressions
 
 ## Contact
 
