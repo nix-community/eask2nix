@@ -40,14 +40,10 @@ jobs:
         - win-x64
 
     steps:
-    - uses: actions/setup-node@v2
-      with:
-        node-version: '16'
+    - uses: actions/checkout@v3
 
     - name: Install pkg
       run: npm install -g pkg
-
-    - uses: actions/checkout@v3
 
     - name: Preparing...
       run: npm install
