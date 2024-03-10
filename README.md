@@ -1,6 +1,7 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-green.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Release](https://img.shields.io/github/release/nix-community/eask2nix.svg?logo=github)](https://github.com/nix-community/eask2nix/releases/latest)
 [![npm](https://img.shields.io/npm/v/eask2nix?logo=npm&color=green)](https://www.npmjs.com/package/eask2nix)
+[![npm-dt](https://img.shields.io/npm/dt/eask2nix.svg)](https://npmcharts.com/compare/eask2nix?minimal=true)
 [![npm-dm](https://img.shields.io/npm/dm/eask2nix.svg)](https://npmcharts.com/compare/eask2nix?minimal=true)
 
 # eask2nix
