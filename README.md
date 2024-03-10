@@ -76,6 +76,6 @@ $ eask2nix generate
 - [ ] Handle dependencies in generated Nix expressions
 - [ ] Generate installable Nix expressions
 
-## Contact
+## 📞 Contact
 
 Problems and questions should go to GitHub [issues](https://github.com/nix-community/eask2nix/issues).
