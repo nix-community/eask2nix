@@ -1,5 +1,5 @@
 /**
- * Copyright (C) 2022-2024 Jen-Chieh Shen
+ * Copyright (C) 2022-2025 Jen-Chieh Shen
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
