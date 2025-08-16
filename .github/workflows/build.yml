@@ -59,7 +59,7 @@ jobs:
         mv README.md dist
 
     - name: Uploading...
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v4
       with:
         name: eask2nix_${{ env.VERSION }}_${{ matrix.targets }}
         path: dist
