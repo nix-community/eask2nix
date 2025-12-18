@@ -29,13 +29,13 @@ Alternatively, you can install it from the source:
 
 ```sh
 # clone it
-$ git cloen https://github.com/nix-community/eask2nix
+git cloen https://github.com/nix-community/eask2nix
 
 # navigate to project root
-$ cd eask2nix
+cd eask2nix
 
 # install all dependencies
-$ npm install
+npm install
 
 # export to environment $PATH
 export PATH="$HOME/eask2nix/bin:$PATH"
@@ -60,13 +60,13 @@ To generate `default.nix` for a set of dependencies:
 
 ```sh
 # navigate to your elisp project
-$ cd your-elisp-project/
+cd your-elisp-project/
 
 # make sure the Eask exists, to create one do `eask init`
-$ cat Eask  # or Easkfile
+cat Eask  # or Easkfile
 
 # generate the Nix expressions from current Eask-file
-$ eask2nix generate
+eask2nix generate
 ```
 
 *P.S. `eask2nix generate` will only take the current loaded Eask-file.*
