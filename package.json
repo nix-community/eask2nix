@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/nix-community/eask2nix#readme",
   "dependencies": {
-    "which": "^6.0.0",
+    "which": "^7.0.0",
     "yargs": "^18.0.0"
   },
   "files": [
