@@ -15,7 +15,7 @@ You will need the following software to run this tool!
 
 - [emacs](https://www.gnu.org/software/emacs/download.html)
 - [eask](https://emacs-eask.github.io/)
-- [nix-hash](https://nixos.wiki/wiki/Nix_Hash)
+- [nix-hash](https://wiki.nixos.org/wiki/Nix_Hash)
 
 ## 💾 Installation
 
